@@ -1,6 +1,9 @@
 {
 	"users (collection)": {
-		"f3adD8ag (document)": { // User ID
+		"f3adD8ag (document)": {
+			// User ID
+			"slugId": "a3bajb0", // Shorter version of the ID, to be used in URLs
+			"slug": "ken-mueller", // URL-safe version of the name
 			"name": "Ken Mueller", // Not unique
 			"email": "kenmueller0@gmail.com", // Unique
 			"source": "web", // (("web" | "ios" | "android")?) Not standardized
@@ -10,11 +13,13 @@
 			"unsubscribed": {
 				"due-cards": true
 			},
-			"topics (array)": [ // The user's interests. If nonexistent, treat as []
+			"topics (array)": [
+				// The user's interests. If nonexistent, treat as []
 				"ab23D8da", // Topic ID
 				"sdf3r3oD"
 			],
-			"allDecks": [ // All the decks this user has gotten, persistent even when deleted. If nonexistent, treat as []
+			"allDecks": [
+				// All the decks this user has gotten, persistent even when deleted. If nonexistent, treat as []
 				"a3gsb2D3n", // Deck ID
 				"asd2SDfC4"
 			],
@@ -22,31 +27,36 @@
 				"a3gsb2D3n (document)": {} // User ID
 			},
 			"activity (collection)": {
-				"1204 (document)": { // Document ID is day
+				"1204 (document)": {
+					// Document ID is day
 					"day": 1204, // (Int) Matches document ID
 					"value": 12 // (Int) Number of cards reviewed
 				}
 			},
 			"decks (collection)": {
-				"a3gsb2D3n (document)": { // Deck ID
+				"a3gsb2D3n (document)": {
+					// Deck ID
 					"added": "DATE", // (Date) The date that this deck was added to this user's libray
 					"favorite": false, // (Bool?) If the deck is favorited or not (If nonexistent, it is false)
 					"dueCardCount": 10, // (Int?) The number of due cards in this deck. This is updated from the backend. Treat as 0 if nonexistent
 					"unsectionedDueCardCount": 4, // (Int) The number of unsectioned due cards
 					"unlockedCardCount": 4, // (Int) The number of unlocked cards
-					"sections (map)": { // If section is not included, the section is not unlocked yet
+					"sections (map)": {
+						// If section is not included, the section is not unlocked yet
 						"abc123": 5 // (Section ID: Int) Number of cards due for section
 					},
 					"rating": 4, // (Int?) The user's rating of this deck. If it is unrated, this is nonexistent
 					"drafts (collection)": {
-						"abac2S4-15 (document)": { // Draft ID
+						"abac2S4-15 (document)": {
+							// Draft ID
 							"section": "ab32asd3F", // (String?) The section ID. Treat as Unsectioned if nonexistent
 							"front": "This is the front", // (String) The front of the card
 							"back": "This is the back" // (String) The back of the card
 						}
 					},
 					"cards (collection)": {
-						"a8D0ba2 (document)": { // Card ID
+						"a8D0ba2 (document)": {
+							// Card ID
 							"new": false, // (Bool) If the card has not been reviewed before
 							"section": "ab32asd3F", // (String) The section ID associated with this card. If this card is unsectioned, this is the empty string
 							"due": "DATE", // (Date) The next due date of this card
@@ -63,7 +73,8 @@
 								"next": "DATE" // (Date) Next date to review
 							},
 							"history (sub-collection)": {
-								"mno345": { // History ID
+								"mno345": {
+									// History ID
 									"date": "DATE", // (Date) Date of the recall attempt
 									"next": "DATE", // (Date) Next date to review
 									"rating": 5, // (Int) Performance rating (0, 1, 2) sent in by client
@@ -72,7 +83,8 @@
 								}
 							}
 						},
-						"abaa89D (document)": { // Card ID
+						"abaa89D (document)": {
+							// Card ID
 							"new": true, // (Bool) If the card has not been reviewed before
 							"section": "ab32asd3F" // (String) The section ID associated with this card. If this card is unsectioned, this is the empty string
 						}
@@ -90,16 +102,19 @@
 		}
 	},
 	"topics (collection)": {
-		"ab23D8da (document)": { // Random ID, same as in Storage
+		"ab23D8da (document)": {
+			// Random ID, same as in Storage
 			"name": "Math" // Unique
 		}
 	},
 	"decks (collection)": {
-		"a3gsb2D3n (document)": { // Random ID, same as in Storage
+		"a3gsb2D3n (document)": {
+			// Random ID, same as in Storage
 			"lastPostedCardIndex": 1, // (Int?) The last posted card index, for the Daily Facts twitter account
 			"slugId": "abc", // (String) A shorter ID
 			"slug": "geometry-prep", // (String) The deck's slug
-			"topics (array)": [ // The topics that this deck is associated with
+			"topics (array)": [
+				// The topics that this deck is associated with
 				"ab23D8da", // Topic ID
 				"sdf3r3oD"
 			],
@@ -131,14 +146,16 @@
 				"f3adD8ag (document)": {} // User ID
 			},
 			"sections (collection)": {
-				"ab32asd3F (document)": { // Section ID
+				"ab32asd3F (document)": {
+					// Section ID
 					"name": "Chapter 1", // (String) The section name
 					"index": 1, // (Int) 0-based index on the order of the section
 					"cardCount": 403 // (Int?) The number of cards in this section. If nonexistent, treat as 0
 				}
 			},
 			"cards (collection)": {
-				"a8D0ba2 (document)": { // Card ID
+				"a8D0ba2 (document)": {
+					// Card ID
 					"section": "ab32asd3F", // (String) The section ID associated with this card. If this card is unsectioned, this is the empty string
 					"front": "<h1>This is an image:</h1><img src=\"example.jpg\">", // (String) The front of the card in HTML
 					"back": "<h1>This is not an image:</h1><p>Here's some text</p>", // (String) The back of the card in HTML
@@ -150,7 +167,8 @@
 		}
 	},
 	"apiKeys (collection)": {
-		"a-badc-c (document)": { // API key
+		"a-badc-c (document)": {
+			// API key
 			"user": "asdb84", // (String) User ID
 			"requests": 20, // (Int) Number of requests made using this API key
 			"enabled": true // (Boolean) If the API key is allowed to make requests
