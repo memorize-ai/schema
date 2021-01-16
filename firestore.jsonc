@@ -8,6 +8,7 @@
 			"email": "kenmueller0@gmail.com", // Unique
 			"source": "web", // (("web" | "ios" | "android")?) Not standardized
 			"deckCount": 4, // (Int?) The number of decks in this user's library. If nonexistent, treat as 0
+			"createdDeckCount": 4, // (Int?) The number of decks this user has created. If nonexistent, treat as 0
 			"xp": 400, // (Int?) The XP that the user has. If nonexistent, treat as 0
 			"allowContact": true,
 			"unsubscribed": {
